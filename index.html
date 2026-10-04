@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Concert Authentique</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .ouverture {
+            text-align: center;
+            animation: apparition 2s ease-in-out;
+        }
+
+        .ouverture h1 {
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .trait {
+            width: 0;
+            height: 4px;
+            background: #00c853;
+            margin: 15px auto;
+            border-radius: 10px;
+            animation: trait 2s ease forwards;
+        }
+
+        .ouverture p {
+            color: #aaa;
+            font-size: 16px;
+            opacity: 0;
+            animation: texte 1s ease 1s forwards;
+        }
+
+        @keyframes apparition {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes trait {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 180px;
+            }
+        }
+
+        @keyframes texte {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ouverture">
+        <h1>Ticket Concert Authentique</h1>
+        <div class="trait"></div>
+        <p>Votre billet, votre accès, votre sécurité.</p>
+    </div>
+
+    <script>
+        // Petite temporisation avant de poursuivre vers la page suivante
+        setTimeout(function () {
+            console.log("Page d'ouverture terminée");
+        }, 3000);
+    </script>
+
+</body>
+</html>
